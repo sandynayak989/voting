@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Website</title>
+	<link rel="stylesheet" href="static/register.css">
+    <style>* {box-sizing: border-box}</style>
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="logo.png">
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+                <form action="action_page.php">
+                    {% csrf_token %}
+                    <div class="container">
+                      <h1>Login</h1>
+                      <br>
+                      <hr>
+                      <label for="USN"><b>University Seat Number</b></label>
+                      <input type="text" placeholder="USN" name="usn" id="usn" required>
+                      <br>
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                      <hr>
+                      <button type="submit" class="loginbtn">Login</button>
+                    </div>
+                  
+                    <div class="container signin">
+                      <p>Dont have an account? <a href="/register">Register</a>.</p>
+                    </div>
+                  </form>
+		</div>
+		</div>
+</body>
+</html>
